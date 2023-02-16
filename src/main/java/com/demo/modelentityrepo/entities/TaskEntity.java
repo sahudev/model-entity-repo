@@ -3,6 +3,7 @@ package com.demo.modelentityrepo.entities;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity(name = "tasks")
 @Table(indexes = @Index(columnList = "title"))
@@ -18,4 +19,7 @@ public class TaskEntity extends BaseEntity{
 
     @Column(name = "due_date",nullable = true)
     Date dueDate;
+
+    @OneToMany(mappedBy = "task",orphanRemoval = true)
+    List<NoteEntity> notes;
 }
