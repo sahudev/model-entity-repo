@@ -12,4 +12,20 @@ public class NoteEntity extends BaseEntity{
 
     @ManyToOne
     TaskEntity task;
+
+    public String getBody() {
+        return body;
+    }
+
+    public void setBody(String body) {
+        this.body = body;
+    }
+
+    public TaskEntity getTask() {
+        return task;
+    }
+
+    public void setTask(TaskEntity task) {
+        this.task = task;
+    }
 }
