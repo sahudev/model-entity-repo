@@ -1,10 +1,15 @@
-package com.demo.modelentityrepo.entities;
+package com.demo.taskmanager.entities;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.CreatedDate;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
+@Getter
+@Setter
 @MappedSuperclass
 public abstract class BaseEntity {
     @Id
@@ -13,6 +18,6 @@ public abstract class BaseEntity {
     private Integer id;
 
     @CreatedDate
-    @Column(name = "created_at",nullable = true,columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
-    private Date createdAt;
+    @Column(name = "created_at",columnDefinition = "TIMESTAMP DEFAULT CURRENT_TIMESTAMP")
+    private LocalDateTime createdAt = LocalDateTime.now();
 }

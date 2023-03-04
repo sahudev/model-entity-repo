@@ -1,6 +1,6 @@
-package com.demo.modelentityrepo.repositories;
+package com.demo.taskmanager.repositories;
 
-import com.demo.modelentityrepo.entities.TaskEntity;
+import com.demo.taskmanager.entities.TaskEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
@@ -19,5 +19,4 @@ public class TasksRepositoryTest {
         var saveTask = tasksRepository.save(task);
         assertNotNull(saveTask);
     }
-
 }

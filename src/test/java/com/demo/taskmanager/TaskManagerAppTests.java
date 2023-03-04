@@ -1,10 +1,10 @@
-package com.demo.modelentityrepo;
+package com.demo.taskmanager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ModelEntityRepoApplicationTests {
+class TaskManagerAppTests {
 
     @Test
     void contextLoads() {
